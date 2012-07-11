@@ -1,3 +1,13 @@
+GIT
+  remote: git://github.com/guiocavalcanti/stresser.git
+  revision: 07db4a8e3f1897eb52012757e6dfc05b90ab5709
+  specs:
+    stresser (0.4.0)
+      OptionParser
+      gruff
+      ruport
+      trollop
+
 GEM
   remote: http://rubygems.org/
   specs:
@@ -8,14 +18,10 @@ GEM
     pdf-writer (1.1.8)
       color (>= 1.4.0)
       transaction-simple (~> 1.3)
+    rmagick (2.13.1)
     ruport (1.6.3)
       fastercsv
       pdf-writer (= 1.1.8)
-    stresser (0.5.0)
-      OptionParser
-      gruff
-      ruport
-      trollop
     transaction-simple (1.4.0.2)
     trollop (1.16.2)
 
@@ -23,4 +29,5 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  stresser
+  rmagick
+  stresser!
