@@ -1,6 +1,6 @@
 GIT
-  remote: git://github.com/guiocavalcanti/stresser.git
-  revision: 07db4a8e3f1897eb52012757e6dfc05b90ab5709
+  remote: git@github.com:guiocavalcanti/stresser.git
+  revision: fbda032188233ede2aa6e759dab600e155ed11be
   specs:
     stresser (0.4.0)
       OptionParser
