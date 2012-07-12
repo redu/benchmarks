@@ -1,10 +1,10 @@
 # Testes de performance
 
-Os testes de performance serão feitos a partir de uma máquina virtual, pois ela já foi configurada para possibilitar a abertura de muitos *file descriptors*.
+Os testes de performance são feitos a partir de uma máquina virtual, pois ela já foi configurada para evitar Segmentation Fault.
 
 ## Máquina virtual
 
-Esta máquina possui o ``httperf`` instalado e as modificações necessárias para que ele execute testes com alto grau de concorrência.
+Esta máquina possui o [httperf](http://www.hpl.hp.com/research/linux/httperf/) instalado e as modificações necessárias para que ele execute testes com alto grau de concorrência.
 
 Para utilizar a máquina, é necessário usar o [vagrant] (http://vagrantup.com/).
 
