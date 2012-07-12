@@ -18,3 +18,4 @@ pickle-email-*.html
 *.swo
 bin
 results
+.vagrant
