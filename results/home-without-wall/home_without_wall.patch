@@ -1,0 +1,48 @@
+From f13f9353a0e14a75435340b484e334c3b0dce8f2 Mon Sep 17 00:00:00 2001
+From: Juliana Lucena <julianalucenaa@gmail.com>
+Date: Tue, 17 Jul 2012 16:54:35 -0300
+Subject: [PATCH] Temp
+
+---
+ app/controllers/application_controller.rb |    2 +-
+ app/views/users/home.html.erb             |    6 +++---
+ 2 files changed, 4 insertions(+), 4 deletions(-)
+
+diff --git a/app/controllers/application_controller.rb b/app/controllers/application_controller.rb
+index ae96cab..07e550c 100644
+--- a/app/controllers/application_controller.rb
++++ b/app/controllers/application_controller.rb
+@@ -52,7 +52,7 @@ class ApplicationController < ActionController::Base
+ 
+   def current_user
+     return @current_user if defined?(@current_user)
+-    @current_user = current_user_session && current_user_session.user
++    @current_user = User.find('guiocavalcanti')
+   end
+ 
+ end
+diff --git a/app/views/users/home.html.erb b/app/views/users/home.html.erb
+index 42f19b1..85a34fa 100644
+--- a/app/views/users/home.html.erb
++++ b/app/views/users/home.html.erb
+@@ -18,14 +18,14 @@
+         :collection => @course_invitations %>
+     </ul>
+   <% end %>
+-  <%= render :partial => 'statuses/create_status',
++  <%#= render :partial => 'statuses/create_status',
+     :locals => { :statusable => current_user } %>
+   <div id="statuses" class="statuses">
+     <ol>
+-      <%= render :partial => 'statuses/item', :collection => @statuses %>
++      <%#= render :partial => 'statuses/item', :collection => @statuses %>
+     </ol>
+ 
+-    <%= will_paginate @statuses, :renderer => EndlessRenderer %>
++    <%#= will_paginate @statuses, :renderer => EndlessRenderer %>
+   </div><!-- end .statuses -->
+ </div><!-- end .main -->
+ 
+-- 
+1.7.4.4
+

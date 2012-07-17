@@ -17,7 +17,6 @@ pickle-email-*.html
 *.swp
 *.swo
 bin
-results
 .vagrant
 *.box
 .DS_Store
