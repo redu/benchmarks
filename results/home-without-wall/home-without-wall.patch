@@ -1,15 +1,16 @@
-From f13f9353a0e14a75435340b484e334c3b0dce8f2 Mon Sep 17 00:00:00 2001
+From 5aa002c1ff9eab3452a6177eaa34049d36af95ba Mon Sep 17 00:00:00 2001
 From: Juliana Lucena <julianalucenaa@gmail.com>
-Date: Tue, 17 Jul 2012 16:54:35 -0300
+Date: Wed, 18 Jul 2012 20:16:01 -0300
 Subject: [PATCH] Temp
 
 ---
  app/controllers/application_controller.rb |    2 +-
+ app/controllers/users_controller.rb       |    4 ++--
  app/views/users/home.html.erb             |    6 +++---
- 2 files changed, 4 insertions(+), 4 deletions(-)
+ 3 files changed, 6 insertions(+), 6 deletions(-)
 
 diff --git a/app/controllers/application_controller.rb b/app/controllers/application_controller.rb
-index ae96cab..07e550c 100644
+index ae96cab..9450b63 100644
 --- a/app/controllers/application_controller.rb
 +++ b/app/controllers/application_controller.rb
 @@ -52,7 +52,7 @@ class ApplicationController < ActionController::Base
@@ -17,10 +18,25 @@ index ae96cab..07e550c 100644
    def current_user
      return @current_user if defined?(@current_user)
 -    @current_user = current_user_session && current_user_session.user
-+    @current_user = User.find('guiocavalcanti')
++    @current_user = User.find('julianalucena')
    end
  
  end
+diff --git a/app/controllers/users_controller.rb b/app/controllers/users_controller.rb
+index 50218fe..03f1ed2 100644
+--- a/app/controllers/users_controller.rb
++++ b/app/controllers/users_controller.rb
+@@ -314,8 +314,8 @@ class UsersController < BaseController
+     @friends = @user.friends.paginate(:page => 1, :per_page => 9)
+     @friends_requisitions = @user.friends_pending
+     @course_invitations = @user.course_invitations
+-    @statuses = @user.home_activity(params[:page])
+-    @status = Status.new
++    #@statuses = @user.home_activity(params[:page])
++    #@status = Status.new
+     @contacts_recommendations = @user.recommended_contacts(5)
+ 
+     respond_to do |format|
 diff --git a/app/views/users/home.html.erb b/app/views/users/home.html.erb
 index 42f19b1..85a34fa 100644
 --- a/app/views/users/home.html.erb
